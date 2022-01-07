@@ -1,0 +1,98 @@
+body{
+    height:90vh;
+    background-image: url("Background.jpg")
+}
+#send_message{
+    position:absolute;
+    text-align:center;
+    bottom: 50px;
+
+}
+ .logo{
+     
+     display : block;
+     margin:auto;
+     width: 100px;
+     height:100px;
+
+ }
+ .appname{
+     margin: auto;
+     color:rgb(45, 61, 206) ;
+     font-weight: 1000;
+     font-size:x-large;
+     align-self: center;
+     text-align: center;
+     font-variant: small-caps;
+     font-family: sans-serif;
+     margin-bottom: 3px;
+     height:5vh;
+ }
+
+
+ .messagebox{
+     margin:auto;
+     max-width:995px;
+     height:65vh;
+     font-weight: bold;
+     border: radius 3px; 
+     overflow-y: auto;
+margin-bottom: 20px
+;
+
+ }
+ .message {
+     border: 1px solid black;
+     width:max-content;
+     max-width:500px;
+     border-radius: 10px;
+    margin-bottom:2px;
+     font-size:15px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     
+
+ }
+
+#send_message{
+display : block;
+text-align: center;
+max-width: 900px;
+margin: auto;
+width:100%;
+padding:30px;
+bottom: 0%;
+
+}
+#inputmessage{
+    border: 2px solid black;
+    font-family:monospace;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 10px;
+    height:5vh;
+}
+ .left{
+    background-color: rgb(213, 235, 235);
+     float:left;
+     clear:both;
+     padding:5px;
+ }
+ .right{
+    background-color: rgb(143, 236, 174);
+    float:right;
+    clear:both;
+    padding:5px;
+}
+.join{
+    background-color: rgb(199, 143, 236);
+     
+    clear:both;
+}
+.btn{
+    cursor: pointer;
+    height:5vh;
+    
+    border-radius: 10px;
+    width: 90%;
+    max-width: 70px;
+}

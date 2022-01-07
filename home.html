@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset ="UTF-8">
+        <meta NAME ="VIEWPORT" content="width=device-width,initial-scale=1.0">
+        <title >
+            my_chat_app
+        </title>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.min.js"></script>
+        <link rel = "stylesheet" type="text/css" href = "../style.css"> 
+</head>
+<body>
+    <div class = "container">
+    <nav><img class = "logo" src = "chat.png" alt=""></nav>
+    <div class ="appname" >Welcome to My Chat</div>
+    <span class ="messagebox" id="msgarea">
+    </span>
+    <div class="row send" id="send_message">
+    <input type="text" id="msg">
+    <button onclick="sendMessage()" class= "btn btn-success bttn">Send</button>
+    </div>
+<script>
+    const socket = io("http://localhost:3000");
+    socket.on('connnection');
+    socket.on('message',(data) => {
+        $("span").append("<div class='message left'>"+data+"</div>")
+    })
+    const sendMessage = () => {
+        let msg = document.getElementById("msg").value;
+        $("span").append("<div class='message right'>"+msg+"</div>")
+        socket.emit('message',msg);
+    }
+</script>
+</body>
+</html>
